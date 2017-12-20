@@ -1,0 +1,14 @@
+{
+  "presets": [
+    "react",
+    "env",
+    "stage-2"
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    "transform-object-rest-spread",
+    "syntax-async-functions",
+    "transform-regenerator"
+
+  ]
+}
