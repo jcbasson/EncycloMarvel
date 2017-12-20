@@ -1,49 +1,64 @@
-h1{
+h1 {
     font-size: 2em;
 }
-h5
-{
 
-}
-h4
-{
-
+h2 {
+    font-size: 1.2em;
 }
 
-.others-remark {
-    height: 80px;
-}
-.others-remark-username
-{
+h4 {
 
 }
-.others-remark-date
-{
 
-}
-.others-remark-text
+label, span, p
 {
+    font-size: 0.775em;
 
 }
 
 @media (min-width: 768px) {
 
-    h1{
+    h1 {
         font-size: 3em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+    label, span, p
+    {
+        font-size: 0.875em;
+
     }
 }
 
 @media (min-width: 992px) {
-    h1{
+    h1 {
         font-size: 4em;
     }
 
+    h2 {
+        font-size: 1.5em;
+    }
+    label, span, p
+    {
+        font-size: 0.875em;
+
+    }
 }
 
 @media (min-width: 1200px) {
 
-    h1{
+    h1 {
         font-size: 4em;
     }
 
+    h2 {
+        font-size: 1.5em;
+    }
+    label, span, p
+    {
+        font-size: 0.875em;
+
+    }
 }

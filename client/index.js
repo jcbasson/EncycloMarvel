@@ -5,12 +5,13 @@ import './styles/style.css';
 import React from 'react'
 import {render} from 'react-dom'
 import {AppContainer} from 'react-hot-loader';
+import AppComponent from './components/app/appComponent'
 
 const renderApp = () =>
 {
     render(
         <AppContainer>
-            <h1>Howzit</h1>
+            <AppComponent></AppComponent>
         </AppContainer>,
         document.getElementById('root')
     )
@@ -18,6 +19,6 @@ const renderApp = () =>
 
 renderApp();
 
-//if (module.hot) module.hot.accept('./components/root/rootComponent', () => renderApp());
+if (module.hot) module.hot.accept('./components/app/appComponent', () => renderApp());
 
 

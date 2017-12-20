@@ -1,68 +1,103 @@
 body {
-    background: white;
+    background: black;
+    color: white;
+    border: 2px solid black;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: cursive;
 }
 
-div, section, aside {
-
-}
-.lblClickToMark{
-    float: right;
-    font-weight: bold;
-    margin-top: 30px;
+.app_header{
+    text-align: center;
 }
 
-.others-remark
+#main-content-component
 {
-    border: 1px solid black;
-}
-.others-remark > header {
-    width: 100%;
-    font-weight: bold;
-    padding-left: 5px;
-    height: 15px;
-}
-
-.others-remark > header > .others-remark-username {
-    float: left;
-}
-
-.others-remark > header > .others-remark-date {
-    float: right;
-
-}
-
-.others-remark-text {
-    padding-left: 5px;
-    width: 100%
-}
-
-#landmark-remarks-map-component
-{
-    border: 1px solid black;
-    height:450px;
-}
-
-#landmark-remarks-map{
-    height: 100%;
-    width: 100%;
-    background-color: grey;
-}
-
-.hide
-{
-    display: none;
-}
-
-.remark-component > textarea
-{
-    display: block;
     height: auto;
-    min-height: 100px;
-    margin: 10px;
-    width: 300px;
-}
-.error-boundary
-{
-    padding: 10px;
+    color: black;
+    background-color: #dddddd;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
 }
 
+/*Character list component and list item component styles START*/
+#marvel-characters-list-component
+{
+    height: auto;
+}
+#marvel-characters-list-component > ul
+{
+    list-style-type: none;
+    height: auto;
+}
+.marvel_character_list_item
+{
+    height: 50px;
+    border:1px solid grey;
+    margin: 5px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 0 5px 0 0;
+}
+
+.marvel_character_list_item:hover{
+   background-color: grey;
+}
+
+.marvel_characters_list_component__header
+{
+    text-align: center;
+}
+
+.marvel_character_list_item .character_thumbnail_container
+{
+    padding: 2px 0 0 4px;
+}
+.marvel_character_list_item  .character_thumbnail {
+    max-width: 100%;
+    padding-top: 4px;
+}
+@media (min-width: 346px) {
+    .marvel_character_list_item  .character_thumbnail {
+        padding-top: 0px;
+    }
+}
+
+
+.marvel_character_list_item .character_name_container
+{
+    padding: 14px 0 0 7px;
+}
+/*Character list component and list item component styles END*/
+
+
+/*Character info component styles START*/
+.marvel_character_info
+{
+    text-align: left;
+}
+
+.back-to-list-button-container
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.marvel_character_img_container
+{
+    text-align: center;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+.marvel_character_img
+{
+    max-width:100%;
+    height: auto;
+}
+
+/*Character info component styles END*/
