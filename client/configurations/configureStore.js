@@ -1,5 +1,4 @@
 import {createStore, applyMiddleware} from 'redux'
-import reduxCatch from 'redux-catch';
 import reducer from './configureReducers';
 import {epicMiddleware, loggerMiddleware}  from './configureMiddelware';
 
@@ -9,8 +8,7 @@ export default function configureStore(preloadedState) {
     return createStore(reducer, preloadedState, composeEnhancers(
         applyMiddleware(
             epicMiddleware,
-            loggerMiddleware,
-            reduxCatch
+            loggerMiddleware
         )
     ));
 }
