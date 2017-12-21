@@ -1,6 +1,6 @@
 export const marvelCharacterMinerEpic = (action$, store, {marvelCharacterService, Observable, actions}) => {
-    const {marvelCharacterMinerActions} = actions;
-    const startMiningCharactersActionType = marvelCharacterMinerActions.getNextBatchOfCharacters().type;
+    const {MarvelCharacterMinerActions} = actions;
+    const startMiningCharactersActionType = MarvelCharacterMinerActions.getNextBatchOfCharacters().type;
     return action$.ofType(startMiningCharactersActionType).mergeMap((action) => {
 
         const {getNextBatchOfCharactersCallbackFunc, offset} = action;
@@ -10,9 +10,9 @@ export const marvelCharacterMinerEpic = (action$, store, {marvelCharacterService
                 const {totalNumberOfMarvelCharactersOnAPI, marvelCharacters} = extractDataFromResponse(response);
                 getNextBatchOfCharactersCallbackFunc(totalNumberOfMarvelCharactersOnAPI, marvelCharacters.length);
 
-                marvelCharacterMinerActions.successRetrievingNextBatchOfCharacters(marvelCharacters)
+                MarvelCharacterMinerActions.successRetrievingNextBatchOfCharacters(marvelCharacters)
             }).catch(error =>
-                (marvelCharacterMinerActions.errorRetrievingNextBatchOfCharacters(error))
+                (MarvelCharacterMinerActions.errorRetrievingNextBatchOfCharacters(error))
             );
     })
 };

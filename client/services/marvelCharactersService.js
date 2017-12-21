@@ -35,4 +35,4 @@ const generateCharactersGetUrl = (apiConfigurationSettings, offset, limit) =>
     return `${ApiBaseUrl}characters?limit=${limit}&offset=${offset}&${ApiKeyParamName}=${ApiKey}`;
 };
 
-export default MarvelCharactersService
+export default MarvelCharactersService;
