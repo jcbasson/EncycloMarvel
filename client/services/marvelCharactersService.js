@@ -1,3 +1,5 @@
+import dummyData from './dummyData';
+
 class MarvelCharactersService{
     constructor(ApiConfigurationSettings)
     {
@@ -17,10 +19,8 @@ class MarvelCharactersService{
         //Execute request to GetPlaces endpoint
         return fetch(request).then((response) => {
             //Check if request was successful
-            if (response.ok && response.status === 200) return response.json();
-            return null;
-        }).then((places) => {
-            return places;
+            if (response.ok && response.status === 200 && response.data) return extractDataFromResponse(response);
+            return extractDataFromResponse(dummyData["data" + offset]);
         }).catch(error => {
             //TODO: Log this error
             console.log('Error occurred fetching characters : ',error);
@@ -28,6 +28,12 @@ class MarvelCharactersService{
         });
     };
 }
+
+const extractDataFromResponse = (response) => {
+    const {total, results} = response.data;
+    return {totalNumberOfMarvelCharactersOnAPI: total? total: 0, marvelCharacters: results? results: []}
+};
+
 
 const generateCharactersGetUrl = (apiConfigurationSettings, offset, limit) =>
 {

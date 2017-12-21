@@ -1,27 +1,20 @@
-import marvelCharacterMinerActionTypes from '../actions/marvelCharacterMinerActions'
+import marvelCharacterMinerActionTypes from '../actions/marvelCharacterMinerActions';
 
-export const marvelCharacterMinerEpic = (action$, store, {marvelCharacterService, Observable}) => {
+export const marvelCharacterMinerEpic = (action$, store, {marvelCharacterService, Observable, marvelCharacterMinerComponent}) => {
 
     const startMiningCharactersActionType = marvelCharacterMinerActionTypes.getNextBatchOfCharacters().type;
     return action$.ofType(startMiningCharactersActionType).mergeMap((action) => {
-
         const {getNextBatchOfCharactersCallbackFunc, offset} = action;
         return Observable.fromPromise(marvelCharacterService.fetchCharacters(offset))
-            .map(response => {
+            .map(result => {
+                const {totalNumberOfMarvelCharactersOnAPI, marvelCharacters} = result;
+                //Notify Marvel Character Miner, had to do this because of referencing issue with "this" when calling this method from the epic
+                getNextBatchOfCharactersCallbackFunc(marvelCharacterMinerComponent, totalNumberOfMarvelCharactersOnAPI, marvelCharacters.length);
 
-                const {totalNumberOfMarvelCharactersOnAPI, marvelCharacters} = extractDataFromResponse(response);
-                getNextBatchOfCharactersCallbackFunc(totalNumberOfMarvelCharactersOnAPI, marvelCharacters.length);
-
-                marvelCharacterMinerActionTypes.successRetrievingNextBatchOfCharacters(marvelCharacters)
+                //Update state with new marvel characters
+                return marvelCharacterMinerActionTypes.successRetrievingNextBatchOfCharacters(marvelCharacters)
             }).catch(error =>
                 (marvelCharacterMinerActionTypes.errorRetrievingNextBatchOfCharacters(error))
             );
     })
-};
-
-const extractDataFromResponse = (response) => {
-    const {data} = response;
-    if(!data) return null;
-    const {total, results} = data;
-    return {totalNumberOfMarvelCharactersOnAPI: total? total: 0, marvelCharacters: results? results: []}
 };

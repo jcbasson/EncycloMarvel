@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import AppPresenter from './appPresenter'
-import MarvelCharacterMinerComponent from '../../marvelCharacterMiner/marvelCharacterMinerComponent';
+import marvelCharacterMinerComponent from '../../marvelCharacterMiner/marvelCharacterMinerComponent';
 
 class AppContainer extends Component {
     constructor(props) {
@@ -10,7 +10,7 @@ class AppContainer extends Component {
     componentDidMount()
     {
         const {dispatch} = this.props;
-        const marvelCharacterMinerComponent = new MarvelCharacterMinerComponent(dispatch);
+        marvelCharacterMinerComponent.setDispatcher(dispatch);
         marvelCharacterMinerComponent.mine();
     }
 
