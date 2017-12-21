@@ -22,9 +22,7 @@ const miningMarvelCharacters = (state, action) => {
                 isFinishedStartedMiningCharacters: action.isFinishedStartedMiningCharacters
             });
         case MarvelCharacterMinerActionTypes.SUCCESS_RETRIEVING_NEXT_BATCH_OF_CHARACTERS:
-            console.log('new marvel characters', action.marvelCharacters);
             const marvelCharacters = createNewMarvelCharactersList(state.marvelCharacters, action.marvelCharacters);
-            console.log('new total marvel characters', marvelCharacters);
             return createNextState(state, {
                 marvelCharacters
             });
@@ -40,7 +38,7 @@ const miningMarvelCharacters = (state, action) => {
 }
 
 const createNewMarvelCharactersList = (existingMarvelCharacters, newMarvelCharacters) => {
-    return [...existingMarvelCharacters, newMarvelCharacters];
+    return [...existingMarvelCharacters, ...newMarvelCharacters];
 };
 
 const createNextState = (state, appProperties) => {
@@ -49,7 +47,6 @@ const createNextState = (state, appProperties) => {
 };
 
 const MiningMarvelCharactersReducer = (state = DefaultAppState, action) => {
-    console.log(action.type);
     switch (action.type) {
         case MarvelCharacterMinerActionTypes.GET_NEXT_BATCH_OF_CHARACTERS:
         case MarvelCharacterMinerActionTypes.STARTED_MINING_CHARACTERS:
