@@ -1,7 +1,7 @@
-import MarvelCharacterInfoContainer from './view/appContainer';
+import {connect} from 'react-redux';
+import AppContainer from './view/appContainer';
 
-
-const AppComponent = MarvelCharacterInfoContainer;
-
+const AppComponent = connect(
+)(AppContainer);
 
 export default AppComponent;

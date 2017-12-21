@@ -1,7 +1,7 @@
+import {connect} from 'react-redux';
 import MainContentContainer from './view/marvelCharactersListContainer';
 
-
-const MarvelCharactersListComponent = MainContentContainer;
-
+const MarvelCharactersListComponent = connect(
+)(MainContentContainer);
 
 export default MarvelCharactersListComponent;

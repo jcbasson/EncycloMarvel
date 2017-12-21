@@ -3,7 +3,6 @@ import {createEpicMiddleware, combineEpics} from 'redux-observable';
 import {createLogger} from 'redux-logger'
 import {marvelCharacterMinerEpic} from '../components/marvelCharacterMiner/epics/marvelCharacterMinerEpic';
 import {marvelCharacterService} from './configureServices';
-import {appActions} from "./configureActions";
 
 //Combine all the application epics
 const appEpic = combineEpics(marvelCharacterMinerEpic);
@@ -12,8 +11,7 @@ const appEpic = combineEpics(marvelCharacterMinerEpic);
 export const epicMiddleware = createEpicMiddleware(appEpic, {
     dependencies: {
         marvelCharacterService,
-        Observable,
-        actions: appActions
+        Observable
     }
 });
 //Create logging middleware for tracing

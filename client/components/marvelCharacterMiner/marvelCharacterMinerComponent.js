@@ -1,17 +1,18 @@
+import marvelCharacterMinerAction from './actions/marvelCharacterMinerActions'
+
 class MarvelCharacterMinerComponent {
-    constructor(dispatch, actions) {
+    constructor(dispatch) {
         this.dispatch = dispatch;
-        this.actions = actions;
         this.currentOffset = 0;
         this.numberOfBatchesComplete = 0;
         this.totalNumberOfMarvelCharactersOnAPI = 0;
     }
 
     mine() {
-        const {dispatch, actions, currentOffset, batchMinedSuccessfullyHandler} = this;
-        const {startMiningCharacters, getNextBatchOfCharacters} = actions;
+        const {dispatch, currentOffset, batchMinedSuccessfullyHandler} = this;
+        const {startMiningCharacters, getNextBatchOfCharacters} = marvelCharacterMinerAction;
         dispatch(startMiningCharacters());
-        dispatch(getNextBatchOfCharacters(currentOffset, batchMinedSuccessfullyHandler))
+        dispatch(getNextBatchOfCharacters(currentOffset, batchMinedSuccessfullyHandler.bind(this)))
     }
 
     batchMinedSuccessfullyHandler(currentTotalNumberOfMarvelCharacters, numberOfMarvelCharactersRetrieved) {
@@ -19,8 +20,8 @@ class MarvelCharacterMinerComponent {
         console.log('currentTotalNumberOfMarvelCharacters : ', currentTotalNumberOfMarvelCharacters);
         console.log('numberOfMarvelCharactersRetrieved : ', numberOfMarvelCharactersRetrieved);
 
-        const {dispatch, actions} = this;
-        const {firstBatchOfCharactersRetrieved, finishedMiningCharacters} = actions;
+        const {dispatch} = this;
+        const {firstBatchOfCharactersRetrieved, finishedMiningCharacters} = marvelCharacterMinerAction;
 
         this.numberOfBatchesComplete++;
         this.currentOffset += numberOfMarvelCharactersRetrieved;

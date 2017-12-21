@@ -6,7 +6,7 @@ import MarvelCharacterInfoComponent from '../../marvelCharacterInfo/marvelCharac
  * @Function MainContentPresenter
  * @desc React Presenter function returning component jsx
  */
-const MainContentPresenter = ({appActions}) => (
+const MainContentPresenter = () => (
     <main id="main-content-component" className="container-fluid col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-4 col-md-4 col-lg-offset-4 col-lg-4">
         <MarvelCharactersListComponent></MarvelCharactersListComponent>
         {/*<MarvelCharacterInfoComponent></MarvelCharacterInfoComponent>*/}

@@ -1,5 +1,6 @@
+
 class AppReducer {
-    constructor(Immutable, DefaultAppState, AppActionTypes, MarvelCharacterMinerReducer) {
+    constructor(Immutable, DefaultAppState, MarvelCharacterMinerReducer) {
         this.immutable = Immutable;
         this.defaultAppState = DefaultAppState;
         this.marvelCharacterMinerReducer = MarvelCharacterMinerReducer;
