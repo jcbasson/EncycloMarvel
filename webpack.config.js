@@ -32,7 +32,7 @@ module.exports = {
         'react-hot-loader/patch',
         "webpack/hot/only-dev-server",
         'webpack-dev-server/client?http://localhost:8080/',
-        path.join(__dirname, 'client/index.js')
+        path.join(__dirname, 'client/initEncycloMarvel.js')
     ],
     output: {
         filename: '[name].[hash].js',

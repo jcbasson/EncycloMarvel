@@ -9,7 +9,7 @@ var server = new WebpackDevServer(compiler, {
     port: 8080,
     historyApiFallback: true,
     // respond to 404s with index.html
-    contentBase: path.join(__dirname, 'client/index.js'),
+    contentBase: path.join(__dirname, 'client/initEncycloMarvel.js'),
     hot: true,
     filename: '[name].[hash].js',
     stats: {
