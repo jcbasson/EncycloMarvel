@@ -10,11 +10,31 @@ class MarvelCharacterInfoContainer extends Component {
     }
     shouldComponentUpdate(nextProps)
     {
-        return nextProps.currentlyViewedMarvelCharacter.id !== this.props.currentlyViewedMarvelCharacter.id;
+        const {props} = this;
+        if(nextProps.currentlyViewedMarvelCharacter
+            && props.currentlyViewedMarvelCharacter
+            && nextProps.currentlyViewedMarvelCharacter.id
+            && props.currentlyViewedMarvelCharacter.id)
+        {
+            return nextProps.currentlyViewedMarvelCharacter.id !== props.currentlyViewedMarvelCharacter.id;
+        }
+        return true;
     }
 
     render() {
-        return MarvelCharacterInfoPresenter(this.props);
+        let imageUrl = '';
+        let name =  '';
+        let description = '';
+        const {currentlyViewedMarvelCharacter}= this.props;
+        if(currentlyViewedMarvelCharacter)
+        {
+            name = currentlyViewedMarvelCharacter.name? currentlyViewedMarvelCharacter.name: '';
+            description = currentlyViewedMarvelCharacter.description? currentlyViewedMarvelCharacter.description: '';
+            if (currentlyViewedMarvelCharacter.thumbnail && currentlyViewedMarvelCharacter.thumbnail.path && currentlyViewedMarvelCharacter.thumbnail.extension) {
+                imageUrl = `${currentlyViewedMarvelCharacter.thumbnail.path}/landscape_incredible.${currentlyViewedMarvelCharacter.thumbnail.extension}`;
+            }
+        }
+        return MarvelCharacterInfoPresenter({name, description, imageUrl});
     }
 }
 

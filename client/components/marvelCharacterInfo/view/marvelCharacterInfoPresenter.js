@@ -5,8 +5,7 @@ import {Link} from 'react-router-dom';
  * @Function MarvelCharacterInfoPresenter
  * @desc React Presenter function returning component jsx
  */
-const MarvelCharacterInfoPresenter = ({currentlyViewedMarvelCharacter}) => {
-    const imageUrl = `${currentlyViewedMarvelCharacter.thumbnail.path}/landscape_incredible.${currentlyViewedMarvelCharacter.thumbnail.extension}`;
+const MarvelCharacterInfoPresenter = ({name, description, imageUrl}) => {
     return (
         <section id="marvel-character-info-component"
                  className="marvel_character_info col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -23,7 +22,7 @@ const MarvelCharacterInfoPresenter = ({currentlyViewedMarvelCharacter}) => {
                         <label id="lblMarvelCharacterNameText">Name:</label>
                     </div>
                     <div className="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                        <span id="marvel-character-name">{currentlyViewedMarvelCharacter.name}</span>
+                        <span id="marvel-character-name">{name}</span>
                     </div>
                 </div>
                 <div>
@@ -32,7 +31,7 @@ const MarvelCharacterInfoPresenter = ({currentlyViewedMarvelCharacter}) => {
                     </div>
                     <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9">
                         <p id="marvel-character-description">
-                            {currentlyViewedMarvelCharacter.description}
+                            {description}
                         </p>
                     </div>
                 </div>
