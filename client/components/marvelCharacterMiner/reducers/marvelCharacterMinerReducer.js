@@ -1,4 +1,5 @@
 import MarvelCharacterMinerActionTypes from '../constants/marvelCharacterMinerActionTypes';
+import MarvelCharacterInfoActionTypes from '../../marvelCharacterInfo/constants/marvelCharacterInfoActionTypes';
 import DefaultAppState from '../constants/defaultAppState'
 
 
@@ -35,10 +36,31 @@ const miningMarvelCharacters = (state, action) => {
         default:
             return state
     }
-}
+};
+
+const viewingMarvelCharacters = (state, action) => {
+    switch (action.type) {
+        case MarvelCharacterInfoActionTypes.SET_VIEWED_CHARACTER:
+            const currentlyViewedMarvelCharacter = getMarvelCharacterById(action.characterId, state.marvelCharacters);
+            return createNextState(state, {
+                currentlyViewedMarvelCharacter
+            });
+        default:
+            return state
+    }
+};
 
 const createNewMarvelCharactersList = (existingMarvelCharacters, newMarvelCharacters) => {
     return [...existingMarvelCharacters, ...newMarvelCharacters];
+};
+
+const getMarvelCharacterById = (marvelCharacterId, marvelCharacters) => {
+    //TODO: Implement immutable.js to optimize things like this
+    for (let i = 0; i < marvelCharacters.length; i++) {
+        const currentMarvelCharacter = marvelCharacters[i];
+        if (currentMarvelCharacter.id == marvelCharacterId) return currentMarvelCharacter;
+    }
+    return null;
 };
 
 const createNextState = (state, appProperties) => {
@@ -46,7 +68,7 @@ const createNextState = (state, appProperties) => {
         state, appProperties);
 };
 
-const MiningMarvelCharactersReducer = (state = DefaultAppState, action) => {
+const MarvelCharactersReducer = (state = DefaultAppState, action) => {
     switch (action.type) {
         case MarvelCharacterMinerActionTypes.GET_NEXT_BATCH_OF_CHARACTERS:
         case MarvelCharacterMinerActionTypes.STARTED_MINING_CHARACTERS:
@@ -55,9 +77,11 @@ const MiningMarvelCharactersReducer = (state = DefaultAppState, action) => {
         case MarvelCharacterMinerActionTypes.SUCCESS_RETRIEVING_NEXT_BATCH_OF_CHARACTERS:
         case MarvelCharacterMinerActionTypes.ERROR_RETRIEVING_NEXT_BATCH_OF_CHARACTERS:
             return miningMarvelCharacters(state, action);
+        case MarvelCharacterInfoActionTypes.SET_VIEWED_CHARACTER:
+            return viewingMarvelCharacters(state, action);
         default:
             return state
     }
 };
 
-export default MiningMarvelCharactersReducer;
+export default MarvelCharactersReducer;

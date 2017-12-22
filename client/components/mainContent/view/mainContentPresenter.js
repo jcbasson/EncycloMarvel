@@ -14,7 +14,7 @@ const MainContentPresenter = () =>
             <Switch>
                 <Route exact path='/' component={ MarvelCharactersListComponent } />
                 <Route path='/marvel-characters' component={ MarvelCharactersListComponent } />
-                <Route path='/marvel-character' component={ MarvelCharacterInfoComponent } />
+                <Route path='/marvel-character/:id' component={ MarvelCharacterInfoComponent } />
             </Switch>
         </main>
     );

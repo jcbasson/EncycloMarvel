@@ -49,6 +49,6 @@ class MarvelCharacterMinerActions {
         }
     }
 }
-const marvelCharacterMinerAction = new MarvelCharacterMinerActions;
+const marvelCharacterMinerAction = new MarvelCharacterMinerActions();
 export default marvelCharacterMinerAction;
 
