@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 /**
  * @Function MarvelCharacterInfoPresenter
@@ -8,7 +9,7 @@ const MarvelCharacterInfoPresenter = () => (
     <section id="marvel-character-info-component"
              className="marvel_character_info col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div className="row back-to-list-button-container">
-            <button id="btnBackToList">Back</button>
+            <Link to='/marvel-characters' id="btnBackToList">Full List</Link>
         </div>
         <div className="marvel_character_img_container row">
             <img src="http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b/landscape_incredible.jpg"

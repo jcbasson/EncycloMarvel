@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import MainContentContainer from './view/marvelCharactersListContainer';
+import MarvelCharactersListContainer from './view/marvelCharactersListContainer';
 
 const mapStateToProps = (state) => {
     const {MiningMarvelCharactersReducer} = state;
@@ -10,6 +10,6 @@ const mapStateToProps = (state) => {
 
 const MarvelCharactersListComponent = connect(
     mapStateToProps
-)(MainContentContainer);
+)(MarvelCharactersListContainer);
 
 export default MarvelCharactersListComponent;
