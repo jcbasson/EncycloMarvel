@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux';
-import MarvelCharactersReducer from '../components/marvelCharacterMiner/reducers/marvelCharacterMinerReducer'
+import MarvelCharactersReducer from '../components/app/reducer/appReducer'
 
 
 //Create combined reducers for app

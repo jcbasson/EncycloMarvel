@@ -7,9 +7,9 @@ class MarvelCharactersListContainer extends Component {
         super(props)
     }
     render() {
-        const {isFirstBatchOfCharactersRetrieved, marvelCharacters} = this.props;
+        const {numberOfBatchesRetrieved, marvelCharacters} = this.props;
         let componentList = ( <h4>Loading...</h4>);
-        if(isFirstBatchOfCharactersRetrieved && marvelCharacters) {
+        if(numberOfBatchesRetrieved > 0 && marvelCharacters) {
             componentList =  marvelCharacters.map((marvelCharacter) =>
             {
                 let name = marvelCharacter.name? marvelCharacter.name: 'No Name';

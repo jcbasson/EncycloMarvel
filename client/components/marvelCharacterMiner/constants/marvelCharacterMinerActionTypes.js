@@ -1,4 +1,8 @@
 class MarvelCharacterMinerActionTypes{
+    static get ACTION_CATEGORY()
+    {
+        return 'MARVEL_CHARACTER_MINING_ACTION_CATEGORY';
+    }
     static get GET_NEXT_BATCH_OF_CHARACTERS()
     {
         return 'GET_NEXT_BATCH_OF_CHARACTERS';
@@ -6,10 +10,6 @@ class MarvelCharacterMinerActionTypes{
     static get STARTED_MINING_CHARACTERS()
     {
         return 'STARTED_MINING_CHARACTERS';
-    }
-    static get FIRST_BATCH_OF_CHARACTERS_RETRIEVED()
-    {
-        return 'FIRST_BATCH_OF_CHARACTERS_RETRIEVED';
     }
     static get FINISHED_MINING_CHARACTERS()
     {

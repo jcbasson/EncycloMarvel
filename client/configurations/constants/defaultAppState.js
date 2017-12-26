@@ -1,5 +1,8 @@
+import immutable from 'immutable';
+
 const DefaultAppState = {
-    marvelCharacters: [],
+    marvelCharacters: immutable.fromJS([]),
+    numberOfBatchesRetrieved: 0,
     totalNumberOfCharactersRetrieved: 0,
     isStartedMiningCharacters: false,
     isFinishedStartedMiningCharacters: false,

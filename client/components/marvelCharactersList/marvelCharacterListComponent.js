@@ -3,9 +3,9 @@ import MarvelCharactersListContainer from './view/marvelCharactersListContainer'
 
 const mapStateToProps = (state) => {
     const {MarvelCharactersReducer} = state;
-    let {isFirstBatchOfCharactersRetrieved, marvelCharacters} = MarvelCharactersReducer;
-    marvelCharacters = marvelCharacters.slice(0, 100);
-    return {isFirstBatchOfCharactersRetrieved, marvelCharacters};
+    let {numberOfBatchesRetrieved, marvelCharacters} = MarvelCharactersReducer;
+    marvelCharacters = numberOfBatchesRetrieved > 0? marvelCharacters.toArray().slice(0, 100): [];
+    return {numberOfBatchesRetrieved, marvelCharacters};
 };
 
 const MarvelCharactersListComponent = connect(

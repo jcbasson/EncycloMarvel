@@ -21,13 +21,11 @@ class MarvelCharacterMinerComponent {
 
     batchMinedSuccessfullyHandler(marvelCharacterMinerComponent, currentTotalNumberOfMarvelCharacters, numberOfMarvelCharactersRetrieved) {
 
-        const {firstBatchOfCharactersRetrieved, finishedMiningCharacters} = marvelCharacterMinerAction;
+        const {finishedMiningCharacters} = marvelCharacterMinerAction;
 
         marvelCharacterMinerComponent.numberOfBatchesComplete++;
         marvelCharacterMinerComponent.currentOffset += numberOfMarvelCharactersRetrieved;
         marvelCharacterMinerComponent.totalNumberOfMarvelCharactersOnAPI = currentTotalNumberOfMarvelCharacters;
-
-        if(marvelCharacterMinerComponent.numberOfBatchesComplete === 1)marvelCharacterMinerComponent.dispatch(firstBatchOfCharactersRetrieved());
 
         if ( marvelCharacterMinerComponent.currentOffset < marvelCharacterMinerComponent.totalNumberOfMarvelCharactersOnAPI) {
             marvelCharacterMinerComponent.mine();

@@ -4,6 +4,7 @@ class MarvelCharacterMinerActions {
 
     getNextBatchOfCharacters(offset, getNextBatchOfCharactersCallbackFunc) {
         return {
+            category: MarvelCharacterMinerActionTypes.ACTION_CATEGORY,
             type: MarvelCharacterMinerActionTypes.GET_NEXT_BATCH_OF_CHARACTERS,
             getNextBatchOfCharactersCallbackFunc,
             offset
@@ -12,6 +13,7 @@ class MarvelCharacterMinerActions {
 
     startMiningCharacters() {
         return {
+            category: MarvelCharacterMinerActionTypes.ACTION_CATEGORY,
             type: MarvelCharacterMinerActionTypes.STARTED_MINING_CHARACTERS,
             isStartedMiningCharacters: true
         }
@@ -19,20 +21,15 @@ class MarvelCharacterMinerActions {
 
     successRetrievingNextBatchOfCharacters(marvelCharacters) {
         return {
+            category: MarvelCharacterMinerActionTypes.ACTION_CATEGORY,
             type: MarvelCharacterMinerActionTypes.SUCCESS_RETRIEVING_NEXT_BATCH_OF_CHARACTERS,
             marvelCharacters
         }
     }
 
-    firstBatchOfCharactersRetrieved() {
-        return {
-            type: MarvelCharacterMinerActionTypes.FIRST_BATCH_OF_CHARACTERS_RETRIEVED,
-            isFirstBatchOfCharactersRetrieved: true
-        }
-    }
-
     finishedMiningCharacters() {
         return {
+            category: MarvelCharacterMinerActionTypes.ACTION_CATEGORY,
             type: MarvelCharacterMinerActionTypes.FINISHED_MINING_CHARACTERS,
             isStartedMiningCharacters: false,
             isFinishedStartedMiningCharacters: true
@@ -42,6 +39,7 @@ class MarvelCharacterMinerActions {
     errorRetrievingNextBatchOfCharacters(errorPayload)
     {
         return {
+            category: MarvelCharacterMinerActionTypes.ACTION_CATEGORY,
             type: MarvelCharacterMinerActionTypes.ERROR_RETRIEVING_NEXT_BATCH_OF_CHARACTERS,
             isStartedMiningCharacters: false,
             isFinishedStartedMiningCharacters: false,
