@@ -14,11 +14,9 @@ This is done to have them immediately available when scrolling the the list of m
 ### TODOS
 
     1.Implement infinity scrolling that retrieves the next set of marvel characters when you scroll to the bottom.
-    2.Implement immutable.js for faster data retrieval from the state.
-    3.Investigate why Marvel API returns me a response of OK with no data property.
-    4.Implemente global, redux store and component level exception handling and logging
-    5.More testing.
-    6.Improve UI design.
+    2.Investigate why Marvel API returns me a response of OK with no data property.
+    3.Implemente global, redux store and component level exception handling and logging
+    4.Unit testing.
 
 ## Getting Started
 

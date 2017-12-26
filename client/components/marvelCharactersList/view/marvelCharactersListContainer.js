@@ -6,6 +6,7 @@ class MarvelCharactersListContainer extends Component {
     constructor(props) {
         super(props)
     }
+
     render() {
         const {numberOfBatchesRetrieved, marvelCharacters} = this.props;
         let componentList = ( <h4>Loading...</h4>);

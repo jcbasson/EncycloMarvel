@@ -22,9 +22,11 @@ class MiningMarvelCharactersReducer{
                 });
             case MarvelCharacterMinerActionTypes.SUCCESS_RETRIEVING_NEXT_BATCH_OF_CHARACTERS:
                 const marvelCharacters = createNewMarvelCharactersList(state.marvelCharacters, action.marvelCharacters);
+                const numberOfBatchesRetrieved = state.numberOfBatchesRetrieved + 1;
                 return createNextState(state, {
                     marvelCharacters,
-                    numberOfBatchesRetrieved: state.numberOfBatchesRetrieved + 1
+                    numberOfBatchesRetrieved,
+                    marvelCharacterListViewed:  numberOfBatchesRetrieved === 1? setMarvelCharacterListViewed(state.marvelCharacterListViewed, marvelCharacters): state.marvelCharacterListViewed
                 });
             case MarvelCharacterMinerActionTypes.ERROR_RETRIEVING_NEXT_BATCH_OF_CHARACTERS:
                 return createNextState(state, {
@@ -40,6 +42,13 @@ class MiningMarvelCharactersReducer{
 
 const createNewMarvelCharactersList = (existingMarvelCharacters, newMarvelCharacters) => {
     return existingMarvelCharacters.concat(newMarvelCharacters);
+};
+
+const setMarvelCharacterListViewed =  (marvelCharacterListViewed, allMarvelCharacters) => {
+    let {maxCount, offset} =  marvelCharacterListViewed;
+    const marvelCharactersViewed = allMarvelCharacters.slice(offset,maxCount);
+    offset += 100;
+    return {maxCount,   marvelCharactersViewed, offset};
 };
 
 const createNextState = (state, appProperties) => {
