@@ -1,6 +1,7 @@
 import {connect} from 'react-redux';
 import MarvelCharactersListContainer from './view/marvelCharactersListContainer';
 import withInfiniteScroll from '../sharedHigherOrder/withInfiniteScroll';
+import MarvelCharacterListActions from './actions/marvelCharacterListActions'
 
 const mapStateToProps = (state) => {
     const {MarvelCharactersReducer} = state;
@@ -9,9 +10,9 @@ const mapStateToProps = (state) => {
     return {numberOfBatchesRetrieved, marvelCharacters, onScrollHandler};
 };
 
-const onScrollHandler = () =>
+const onScrollHandler = (scrollDetails, dispatch) =>
 {
-    console.log('Scroll happened');
+    dispatch(MarvelCharacterListActions.setViewedMarvelCharacterList());
 };
 
 const MarvelCharactersListComponent = connect(

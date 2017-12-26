@@ -1,5 +1,5 @@
 # EncycloMarvel
-Encyclopedia of Marvel Characters responsive app, allowing the user to view all Marvel Character information.
+Encyclopedia of Marvel Characters responsive app, allowing the user to view all Marvel Character information. Custom implementation of infinite scrolling with redux, react, and rxjs.
 
 Front-end stack:
 ```
@@ -13,10 +13,8 @@ This is done to have them immediately available when scrolling the the list of m
 ```
 ### TODOS
 
-    1.Implement infinity scrolling that retrieves the next set of marvel characters when you scroll to the bottom.
-    2.Investigate why Marvel API returns me a response of OK with no data property.
-    3.Implemente global, redux store and component level exception handling and logging
-    4.Unit testing.
+    1.Investigate why Marvel API returns me a response of OK with no data property.
+    2.Implemente global, redux store and component level exception handling and logging
 
 ## Getting Started
 

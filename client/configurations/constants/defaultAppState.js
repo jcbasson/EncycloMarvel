@@ -6,7 +6,7 @@ const DefaultAppState = {
     totalNumberOfCharactersRetrieved: 0,
     isStartedMiningCharacters: false,
     isFinishedStartedMiningCharacters: false,
-    marvelCharacterListViewed: {maxCount: 100, marvelCharactersViewed: immutable.fromJS([]), offset: 0},
+    marvelCharacterListViewed: {count: 100, marvelCharactersViewed: immutable.fromJS([]), countPerPage: 100},
     errorPayload: null
 };
 export default DefaultAppState;

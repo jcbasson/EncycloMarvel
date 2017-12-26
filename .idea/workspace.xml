@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0f3e08e2-53da-4937-b9b7-be2e946f1a43" name="Default" comment="Star">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/marvelCharactersList/actions/marvelCharacterListActions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/marvelCharactersList/constants/marvelCharacterListActionTypes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/marvelCharactersList/reducers/marvelCharacterListReducer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/sharedHigherOrder/withInfiniteScroll.js" />
+    <list default="true" id="0f3e08e2-53da-4937-b9b7-be2e946f1a43" name="Default" comment="Finished implementing infinite scrolling with react higher order function, rxjs and redux.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/app/reducer/appReducer.js" afterPath="$PROJECT_DIR$/client/components/app/reducer/appReducer.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/marvelCharacterMiner/reducers/marvelCharacterMinerReducer.js" afterPath="$PROJECT_DIR$/client/components/marvelCharacterMiner/reducers/marvelCharacterMinerReducer.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/marvelCharactersList/marvelCharacterListComponent.js" afterPath="$PROJECT_DIR$/client/components/marvelCharactersList/marvelCharacterListComponent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/marvelCharactersList/view/marvelCharactersListContainer.js" afterPath="$PROJECT_DIR$/client/components/marvelCharactersList/view/marvelCharactersListContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/marvelCharactersList/reducers/marvelCharacterListReducer.js" afterPath="$PROJECT_DIR$/client/components/marvelCharactersList/reducers/marvelCharacterListReducer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/sharedHigherOrder/withInfiniteScroll.js" afterPath="$PROJECT_DIR$/client/components/sharedHigherOrder/withInfiniteScroll.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/configurations/constants/defaultAppState.js" afterPath="$PROJECT_DIR$/client/configurations/constants/defaultAppState.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -36,34 +34,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="withInfiniteScroll.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/components/sharedHigherOrder/withInfiniteScroll.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="8" lean-forward="true" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="marvelCharacterMinerReducer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/components/marvelCharacterMiner/reducers/marvelCharacterMinerReducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="47" column="56" lean-forward="false" selection-start-line="47" selection-start-column="56" selection-end-line="47" selection-end-column="56" />
+            <state relative-caret-position="442">
+              <caret line="26" column="70" lean-forward="false" selection-start-line="26" selection-start-column="70" selection-end-line="26" selection-end-column="70" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="marvelCharacterListComponent.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/components/marvelCharactersList/marvelCharacterListComponent.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="203" lean-forward="false" selection-start-line="7" selection-start-column="203" selection-end-line="7" selection-end-column="203" />
-              <folding>
-                <element signature="e#0#36#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -72,8 +48,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="306">
-                <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+              <first_editor relative-caret-position="17">
+                <caret line="1" column="182" lean-forward="false" selection-start-line="1" selection-start-column="182" selection-end-line="1" selection-end-column="182" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -81,13 +57,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="marvelCharactersListContainer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/components/marvelCharactersList/view/marvelCharactersListContainer.js">
+      <file leaf-file-name="marvelCharacterListComponent.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/components/marvelCharactersList/marvelCharacterListComponent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="57" lean-forward="false" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
+            <state relative-caret-position="238">
+              <caret line="14" column="72" lean-forward="false" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="72" />
               <folding>
-                <element signature="e#0#38#0" expanded="true" />
+                <element signature="e#0#36#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -96,8 +72,8 @@
       <file leaf-file-name="marvelCharacterListActions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/components/marvelCharactersList/actions/marvelCharacterListActions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="41" lean-forward="false" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+            <state relative-caret-position="34">
+              <caret line="2" column="32" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -106,9 +82,21 @@
       <file leaf-file-name="marvelCharacterListActionTypes.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/components/marvelCharactersList/constants/marvelCharacterListActionTypes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="40" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="40" />
+            <state relative-caret-position="0">
+              <caret line="0" column="36" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="36" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="withInfiniteScroll.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/components/sharedHigherOrder/withInfiniteScroll.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="18" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,9 +104,21 @@
       <file leaf-file-name="marvelCharacterListReducer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/components/marvelCharactersList/reducers/marvelCharacterListReducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="391">
+              <caret line="23" column="65" lean-forward="false" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="marvelCharactersListContainer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/components/marvelCharactersList/view/marvelCharactersListContainer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -126,8 +126,8 @@
       <file leaf-file-name="defaultAppState.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/configurations/constants/defaultAppState.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="69" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="69" />
+            <state relative-caret-position="187">
+              <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -201,15 +201,15 @@
         <option value="$PROJECT_DIR$/client/components/marvelCharacterInfo/actions/MarvelCharacterInfoActions.js" />
         <option value="$PROJECT_DIR$/client/components/marvelCharacterInfo/reducers/marvelCharacterInfoReducer.js" />
         <option value="$PROJECT_DIR$/client/configurations/configureReducers.js" />
-        <option value="$PROJECT_DIR$/client/components/app/reducer/appReducer.js" />
         <option value="$PROJECT_DIR$/client/components/marvelCharactersList/constants/marvelCharacterListActionTypes.js" />
         <option value="$PROJECT_DIR$/client/components/marvelCharactersList/actions/marvelCharacterListActions.js" />
-        <option value="$PROJECT_DIR$/client/components/marvelCharactersList/reducers/marvelCharacterListReducer.js" />
         <option value="$PROJECT_DIR$/client/components/marvelCharactersList/view/marvelCharactersListContainer.js" />
+        <option value="$PROJECT_DIR$/client/components/app/reducer/appReducer.js" />
         <option value="$PROJECT_DIR$/client/components/sharedHigherOrder/withInfiniteScroll.js" />
         <option value="$PROJECT_DIR$/client/configurations/constants/defaultAppState.js" />
-        <option value="$PROJECT_DIR$/client/components/marvelCharacterMiner/reducers/marvelCharacterMinerReducer.js" />
+        <option value="$PROJECT_DIR$/client/components/marvelCharactersList/reducers/marvelCharacterListReducer.js" />
         <option value="$PROJECT_DIR$/client/components/marvelCharactersList/marvelCharacterListComponent.js" />
+        <option value="$PROJECT_DIR$/client/components/marvelCharacterMiner/reducers/marvelCharacterMinerReducer.js" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -279,6 +279,44 @@
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="reducer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EncycloMarvel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EncycloMarvel" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EncycloMarvel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EncycloMarvel" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="marvelCharacterInfo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EncycloMarvel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EncycloMarvel" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="marvelCharacterInfo" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EncycloMarvel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EncycloMarvel" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="marvelCharacterListItem" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EncycloMarvel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EncycloMarvel" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="marvelCharacterListItem" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -358,6 +396,13 @@
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="marvelCharactersList" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EncycloMarvel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EncycloMarvel" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="sharedHigherOrder" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EncycloMarvel" type="b2602c69:ProjectViewProjectNode" />
@@ -503,11 +548,18 @@
       <option name="project" value="LOCAL" />
       <updated>1514294973703</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Started implementing infinite scrolling for marvel character list">
+      <created>1514315464498</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1514315464498</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93578000" />
+    <option name="totallyTimeSpent" value="103185000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -515,7 +567,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="18" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16542949" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -527,13 +579,13 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="23" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16542949" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -567,7 +619,8 @@
     <MESSAGE value="Implemented basic routing" />
     <MESSAGE value="Implemented MarvelCharacterInfoComponent" />
     <MESSAGE value="Implemented immutable.js for state and refactored reducers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented immutable.js for state and refactored reducers" />
+    <MESSAGE value="Started implementing infinite scrolling for marvel character list" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started implementing infinite scrolling for marvel character list" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -650,14 +703,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/marvelCharacterListItem/marvelCharacterListItemComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="87" />
           <folding />
         </state>
       </provider>
@@ -748,26 +793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/marvelCharacterListItem/view/marvelCharacterListItemContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="48" lean-forward="true" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#38#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/marvelCharacterInfo/view/marvelCharacterInfoContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#38#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="354">
@@ -791,32 +816,6 @@
           <folding>
             <element signature="e#0#31#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/marvelCharacterListItem/view/marvelCharacterListItemPresenter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="98" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="98" />
-          <folding>
-            <marker date="1513902020058" expanded="true" signature="553:1091" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/marvelCharacterMiner/marvelCharacterMinerComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="27" column="112" lean-forward="false" selection-start-line="27" selection-start-column="112" selection-end-line="27" selection-end-column="112" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/configurations/configureMiddelware.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -852,14 +851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/marvelCharacterMiner/epics/marvelCharacterMinerEpic.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="85" lean-forward="true" selection-start-line="0" selection-start-column="85" selection-end-line="0" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/components/marvelCharacterInfo/reducers/marvelCharacterInfoReducer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -868,22 +859,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/app/reducer/appReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="70" lean-forward="false" selection-start-line="5" selection-start-column="70" selection-end-line="5" selection-end-column="70" />
-          <folding>
-            <element signature="e#0#80#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/components/app/view/appPresenter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="73" lean-forward="false" selection-start-line="1" selection-start-column="73" selection-end-line="1" selection-end-column="73" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -893,17 +874,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="38" />
           <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/configurations/configureReducers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -913,55 +884,111 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#36#0" expanded="true" />
+            <element signature="e#0#36#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/sharedHigherOrder/withInfiniteScroll.js">
+    <entry file="file://$PROJECT_DIR$/client/configurations/configureMiddelware.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="8" lean-forward="true" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#32#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/configurations/configureReducers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#38#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/marvelCharacterMiner/epics/marvelCharacterMinerEpic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="85" lean-forward="true" selection-start-line="0" selection-start-column="85" selection-end-line="0" selection-end-column="85" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/configurations/constants/defaultAppState.js">
+    <entry file="file://$PROJECT_DIR$/client/components/app/reducer/appReducer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="69" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="69" />
+        <state relative-caret-position="221">
+          <caret line="13" column="74" lean-forward="false" selection-start-line="13" selection-start-column="74" selection-end-line="13" selection-end-column="74" />
+          <folding>
+            <element signature="e#0#80#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/marvelCharacterMiner/marvelCharacterMinerComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="27" column="112" lean-forward="false" selection-start-line="27" selection-start-column="112" selection-end-line="27" selection-end-column="112" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/marvelCharacterListItem/view/marvelCharacterListItemPresenter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="98" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="98" />
+          <folding>
+            <marker date="1513902020058" expanded="true" signature="553:1091" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/marvelCharacterListItem/view/marvelCharacterListItemContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="13" column="48" lean-forward="true" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/marvelCharacterListItem/marvelCharacterListItemComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/marvelCharacterInfo/view/marvelCharacterInfoContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="54" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/components/marvelCharactersList/actions/marvelCharacterListActions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="41" lean-forward="false" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+        <state relative-caret-position="34">
+          <caret line="2" column="32" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/components/marvelCharactersList/constants/marvelCharacterListActionTypes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="40" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="40" />
+        <state relative-caret-position="0">
+          <caret line="0" column="36" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/components/marvelCharactersList/reducers/marvelCharacterListReducer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/marvelCharacterMiner/reducers/marvelCharacterMinerReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="47" column="56" lean-forward="false" selection-start-line="47" selection-start-column="56" selection-end-line="47" selection-end-column="56" />
+        <state relative-caret-position="391">
+          <caret line="23" column="65" lean-forward="false" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
           <folding />
         </state>
       </provider>
@@ -974,10 +1001,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/sharedHigherOrder/withInfiniteScroll.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="18" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/components/marvelCharactersList/view/marvelCharactersListContainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="57" lean-forward="false" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
+        <state relative-caret-position="102">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
@@ -986,19 +1023,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/components/marvelCharactersList/marvelCharacterListComponent.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="203" lean-forward="false" selection-start-line="7" selection-start-column="203" selection-end-line="7" selection-end-column="203" />
+        <state relative-caret-position="238">
+          <caret line="14" column="72" lean-forward="false" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="72" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/configurations/constants/defaultAppState.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/marvelCharacterMiner/reducers/marvelCharacterMinerReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="70" lean-forward="false" selection-start-line="26" selection-start-column="70" selection-end-line="26" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="306">
-            <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <first_editor relative-caret-position="17">
+            <caret line="1" column="182" lean-forward="false" selection-start-line="1" selection-start-column="182" selection-end-line="1" selection-end-column="182" />
             <folding />
           </first_editor>
           <second_editor />

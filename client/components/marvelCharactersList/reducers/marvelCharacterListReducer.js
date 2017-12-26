@@ -1,4 +1,4 @@
-import MarvelCharacterListActionTypes from '../../marvelCharacterInfo/constants/marvelCharacterInfoActionTypes';
+import MarvelCharacterListActionTypes from '../../marvelCharactersList/constants/marvelCharacterListActionTypes';
 
 class MarvelCharacterListReducer{
     constructor()
@@ -8,9 +8,8 @@ class MarvelCharacterListReducer{
     reducerActions(state, action) {
         switch (action.type) {
             case MarvelCharacterListActionTypes.SET_VIEWED_CHARACTER_LIST:
-                const currentlyViewedMarvelCharacter = getMarvelCharacterById(action.characterId, state.marvelCharacters);
                 return createNextState(state, {
-                    currentlyViewedMarvelCharacter
+                    marvelCharacterListViewed:  setMarvelCharacterListViewed(state.marvelCharacterListViewed, state.marvelCharacters)
                 });
             default:
                 return state
@@ -18,10 +17,21 @@ class MarvelCharacterListReducer{
     }
 }
 
-const getMarvelCharacterById = (marvelCharacterId, marvelCharacters) => {
-    return marvelCharacters.find((marvelCharacter) => {
-        if(marvelCharacter.id == marvelCharacterId)return marvelCharacter;
-    });
+const setMarvelCharacterListViewed =  (marvelCharacterListViewed, allMarvelCharacters) => {
+    let {marvelCharactersViewed, count, countPerPage} =  marvelCharacterListViewed;
+    const allMarvelCharactersSize = allMarvelCharacters.size;
+    let nextOffset = calculateNextOffset(count, allMarvelCharactersSize);
+    count += nextOffset >= countPerPage? countPerPage:nextOffset;
+    if(count <= allMarvelCharactersSize)
+    {
+        marvelCharactersViewed = allMarvelCharacters.slice(0,count);
+    }
+    return {count, marvelCharactersViewed};
+};
+
+const calculateNextOffset = (count, allMarvelCharactersSize) => {
+
+    return allMarvelCharactersSize - count;
 };
 
 const createNextState = (state, appProperties) => {

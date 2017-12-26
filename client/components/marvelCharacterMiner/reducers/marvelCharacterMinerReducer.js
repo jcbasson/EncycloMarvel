@@ -1,16 +1,14 @@
 import MarvelCharacterMinerActionTypes from '../constants/marvelCharacterMinerActionTypes';
 
-class MiningMarvelCharactersReducer{
-    constructor()
-    {
-        this.actionTypeCategory =  MarvelCharacterMinerActionTypes.ACTION_CATEGORY;
+class MiningMarvelCharactersReducer {
+    constructor() {
+        this.actionTypeCategory = MarvelCharacterMinerActionTypes.ACTION_CATEGORY;
     }
-    reducerActions(state, action){
+
+    reducerActions(state, action) {
         switch (action.type) {
             case MarvelCharacterMinerActionTypes.GET_NEXT_BATCH_OF_CHARACTERS:
-                return createNextState(state, {
-                    totalNumberOfCharactersRetrieved: action.offset
-                });
+                return state;
             case MarvelCharacterMinerActionTypes.STARTED_MINING_CHARACTERS:
                 return createNextState(state, {
                     isStartedMiningCharacters: action.isStartedMiningCharacters
@@ -26,7 +24,8 @@ class MiningMarvelCharactersReducer{
                 return createNextState(state, {
                     marvelCharacters,
                     numberOfBatchesRetrieved,
-                    marvelCharacterListViewed:  numberOfBatchesRetrieved === 1? setMarvelCharacterListViewed(state.marvelCharacterListViewed, marvelCharacters): state.marvelCharacterListViewed
+                    totalNumberOfCharactersRetrieved: marvelCharacters.size,
+                    marvelCharacterListViewed: numberOfBatchesRetrieved === 1 ? setMarvelCharacterListViewed(state.marvelCharacterListViewed, marvelCharacters) : state.marvelCharacterListViewed
                 });
             case MarvelCharacterMinerActionTypes.ERROR_RETRIEVING_NEXT_BATCH_OF_CHARACTERS:
                 return createNextState(state, {
@@ -44,11 +43,10 @@ const createNewMarvelCharactersList = (existingMarvelCharacters, newMarvelCharac
     return existingMarvelCharacters.concat(newMarvelCharacters);
 };
 
-const setMarvelCharacterListViewed =  (marvelCharacterListViewed, allMarvelCharacters) => {
-    let {maxCount, offset} =  marvelCharacterListViewed;
-    const marvelCharactersViewed = allMarvelCharacters.slice(offset,maxCount);
-    offset += 100;
-    return {maxCount,   marvelCharactersViewed, offset};
+const setMarvelCharacterListViewed = (marvelCharacterListViewed, allMarvelCharacters) => {
+    const {count} = marvelCharacterListViewed;
+    const marvelCharactersViewed = allMarvelCharacters.slice(0, count);
+    return createNextState(marvelCharacterListViewed,{count, marvelCharactersViewed});
 };
 
 const createNextState = (state, appProperties) => {
